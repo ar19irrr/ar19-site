@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <title>AR19 | آهنگساز و توسعه‌دهنده ربات</title>
+    <title>AR19 | توسعه‌دهنده ربات تلگرام</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        ...
+
         :root {
             --bg-primary: #0a0a0f;
             --bg-secondary: #12121a;
@@ -293,22 +293,49 @@
         }
 
         .about-content {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
-            text-align: center;
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 50px;
+            align-items: center;
+            text-align: right;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-img-box {
+            width: 100%;
+            border-radius: 25px;
+            overflow: hidden;
+            border: 2px solid var(--border);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .about-img-box img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s;
+        }
+
+        .about-img-box:hover img {
+            transform: scale(1.05);
         }
 
         .about-text {
             font-size: 1.2rem;
             color: var(--text-secondary);
             line-height: 2;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
 
         .skills {
             display: flex;
             gap: 15px;
-            justify-content: center;
+            justify-content: flex-start;
             flex-wrap: wrap;
         }
 
@@ -355,19 +382,6 @@
             color: var(--text-secondary);
             margin-bottom: 30px;
             line-height: 2;
-        }
-
-        .music-highlight {
-            background: rgba(139, 92, 246, 0.1);
-            padding: 20px;
-            border-radius: 15px;
-            border: 1px solid var(--border);
-            margin-bottom: 30px;
-        }
-
-        .music-highlight p {
-            color: var(--text-primary);
-            font-weight: 600;
         }
 
         /* ===== BOTS ===== */
@@ -444,6 +458,8 @@
             font-weight: 600;
             margin-bottom: 15px;
             display: block;
+            direction: ltr;
+            text-align: right;
         }
 
         .bot-card p {
@@ -634,6 +650,20 @@
                 font-size: 1.1rem;
                 padding: 15px 20px;
             }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .skills {
+                justify-content: center;
+            }
+
+            .about-img-box {
+                max-width: 350px;
+                margin: 0 auto;
+            }
         }
 
         /* ===== ANIMATIONS ===== */
@@ -704,9 +734,9 @@
     <section class="hero" id="home">
         <div class="hero-content">
             <h1 class="hero-title">AR19</h1>
-            <p class="hero-subtitle">آهنگساز | توسعه‌دهنده ربات تلگرام</p>
+            <p class="hero-subtitle">توسعه‌دهنده ربات تلگرام | تولیدکننده محتوا</p>
             <p class="hero-bio">
-                حَسْبُنَاالله‌وَنِعْمَ‌الْوَکیٖلْ...خُڋا‌ݕَڔٰاےِݦَݧ‌ْڬٰاڣٖیښٺ
+                حَسْبُنَاالله‌وَنِعْمَ‌الْوَکیٖلْ...خُا‌ݕَڔٰاےِݦَݧ‌ْڬٰاٖیښٺ
             </p>
             <div class="hero-buttons">
                 <a href="#bots" class="btn btn-primary">🤖 ربات‌های من</a>
@@ -723,15 +753,25 @@
                 <p>کسی که پشت این آثار هست</p>
             </div>
             <div class="about-content fade-in">
-                <p class="about-text">
-                    من AR19 هستم. و Suno AI آهنگ‌های منحصر به فرد می‌سازم و ربات‌های تلگرام کاربردی توسعه می‌دم. هدفم اینه که با ترکیب تکنولوژی و خلاقیت، تجربه‌های جدیدی خلق کنم.
-                </p>
-                <div class="skills">
-                    <span class="skill-tag">🎵 ساخت آهنگ با AI</span>
-                    <span class="skill-tag">🤖 توسعه ربات تلگرام</span>
-                    <span class="skill-tag">⚡ Suno AI</span>
-                    <span class="skill-tag">🎨 خلاقیت دیجیتال</span>
-                    <span class="skill-tag">💻 برنامه‌نویسی</span>
+                <div class="about-image">
+                    <div class="about-img-box">
+                        <!-- ️ عکس خودت رو اینجا بذار (راهنما پایین صفحه) -->
+                        <img src="your-photo.jpg" alt="AR19">
+                    </div>
+                </div>
+                <div>
+                    <p class="about-text">
+                        من AR19 هستم. توسعه‌دهنده ربات‌های تلگرام و تولیدکننده محتوا. 
+                        هدفم اینه که با خلاقیت و برنامه‌نویسی، تجربه‌های جدید و کاربردی خلق کنم.
+                        ربات‌های من برای سرگرمی، مدیریت گروه و ارتباط بهتر طراحی شدن.
+                    </p>
+                    <div class="skills">
+                        <span class="skill-tag">🤖 توسعه ربات تلگرام</span>
+                        <span class="skill-tag">🎵 تولید موسیقی</span>
+                        <span class="skill-tag"> تولید محتوا</span>
+                        <span class="skill-tag">💻 برنامه‌نویسی</span>
+                        <span class="skill-tag">🎨 خلاقیت دیجیتال</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -742,15 +782,12 @@
         <div class="container">
             <div class="section-title fade-in">
                 <h2>موسیقی من</h2>
-                <p>آثار ساخته شده با هوش مصنوعی</p>
+                <p>آثار و تولیدات موسیقی</p>
             </div>
             <div class="music-content fade-in">
-                <div class="music-icon">🎵</div>
-                <div class="music-highlight">
-                    <p>✨ تمام آهنگ‌های من با Suno AI ساخته می‌شن</p>
-                </div>
+                <div class="music-icon"></div>
                 <p class="music-text">
-                    من با استفاده از هوش مصنوعی، آهنگ‌های منحصر به فرد در سبک‌های مختلف می‌سازم. 
+                    من آهنگ‌های منحصر به فرد در سبک‌های مختلف می‌سازم. 
                     برای شنیدن و دانلود آهنگ‌ها، به کانال تلگرام من سر بزن.
                 </p>
                 <a href="https://t.me/ar19_irr" class="btn btn-telegram" target="_blank">
@@ -773,7 +810,7 @@
                     <div class="bot-icon">🐺</div>
                     <h3>NITO | نیتو</h3>
                     <span class="bot-id">@ni_cop_bot</span>
-                    <p>ربات حرفه‌ای بازی گرگینه با ۷۰ نقش مختلف! بازی کامل با سیستم شب و روز، نقش‌های مخفی، XP و رنک‌بندی.</p>
+                    <p>ربات حرفه‌ای بازی گرگینه با ۷ نقش مختلف! بازی کامل با سیستم شب و روز، نقش‌های مخفی، XP و رنک‌بندی.</p>
                     <div class="bot-features">
                         <span class="bot-feature">۷۰ نقش</span>
                         <span class="bot-feature">سیستم XP</span>
@@ -788,20 +825,20 @@
                     <div class="bot-icon">📚</div>
                     <h3>کَویرا (Kavira)</h3>
                     <span class="bot-id">@lover_19_bot</span>
-                    <p>ربات مولتی‌فانکشن سرگرمی و مدیریت گروه. نظرسنجی، زوج‌یابی، سینما، فوتبال، هوش مصنوعی و بازی‌های متنوع.</p>
+                    <p>ربات مولتی‌فانکشن سرگرمی و مدیریت گروه. نظرسنجی، زوج‌یابی، سینما، فوتبال، و بازی‌های متنوع.</p>
                     <div class="bot-features">
                         <span class="bot-feature">نظرسنجی</span>
                         <span class="bot-feature">سینما</span>
                         <span class="bot-feature">فوتبال</span>
-                        <span class="bot-feature">هوش مصنوعی</span>
                         <span class="bot-feature">بازی کلمه</span>
+                        <span class="bot-feature">مدیریت گروه</span>
                     </div>
                     <a href="https://t.me/lover_19_bot" class="bot-link" target="_blank">شروع استفاده</a>
                 </div>
 
                 <!-- Bot 3 -->
                 <div class="bot-card fade-in">
-                    <div class="bot-icon">💘</div>
+                    <div class="bot-icon"></div>
                     <h3>عشق جاودانه</h3>
                     <span class="bot-id">@love_javdane_bot</span>
                     <p>ربات دوست‌یابی و چت با امکانات کامل. پروفایل، جستجو، مچینگ، چت ۳ روزه، ویس معرفی و حریم خصوصی.</p>
@@ -827,7 +864,7 @@
             </div>
             <div class="channel-content fade-in">
                 <div class="channel-box">
-                    <div class="channel-icon">📢</div>
+                    <div class="channel-icon"></div>
                     <h3 style="font-size: 1.8rem; margin-bottom: 15px;">@ar19_irr</h3>
                     <p style="color: var(--text-secondary); line-height: 2;">
                         در کانال تلگرام من می‌تونی به همه آهنگ‌ها دسترسی داشته باشی، 
@@ -857,7 +894,7 @@
                         📱
                     </a>
                     <a href="https://instagram.com/ar19_ir" class="social-link instagram" target="_blank" title="اینستاگرام">
-                        📸
+                        
                     </a>
                 </div>
             </div>
@@ -867,7 +904,7 @@
     <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
-            <p>© ۲۰۲۵ AR19 | ساخته شده با <span class="footer-heart">❤️</span> و هوش مصنوعی</p>
+            <p>© ۲۲۵ AR19 | ساخته شده با <span class="footer-heart">❤️</span></p>
         </div>
     </footer>
 
